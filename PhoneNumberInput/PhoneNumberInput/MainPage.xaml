@@ -1,0 +1,112 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:editors="clr-namespace:Syncfusion.Maui.Inputs;assembly=Syncfusion.Maui.Inputs"
+             x:Class="PhoneNumberInput.MainPage"
+             Title="Phone Number Input">
+
+    <ScrollView>
+        <VerticalStackLayout Padding="20,30"
+                             Spacing="20">
+
+            <!-- Title -->
+            <Label Text="Phone Number Registration" 
+                   FontSize="28"
+                   FontAttributes="Bold"
+                   HorizontalOptions="Center"
+                   Margin="0,20,0,10"/>
+
+            <Label Text="Enter your phone number using the masked input below" 
+                   FontSize="14"
+                   TextColor="#666666"
+                   HorizontalOptions="Center"
+                   Margin="0,0,0,20"/>
+
+            <!-- US Phone Number Format -->
+            <VerticalStackLayout Spacing="8">
+                <Label Text="US Phone Number (Format: (XXX) XXX-XXXX)" 
+                       FontSize="14"
+                       FontAttributes="Bold"/>
+                
+                <editors:SfMaskedEntry x:Name="USPhoneNumberEntry"
+                                       Mask="(###) ###-####"
+                                       Placeholder="(123) 456-7890"
+                                       HeightRequest="50"
+                                       HorizontalTextAlignment="Center"
+                                       FontSize="16"
+                                       PromptChar="_"/>
+                
+                <Label x:Name="USPhoneNumberStatus" 
+                       FontSize="12"
+                       TextColor="#888888"/>
+            </VerticalStackLayout>
+
+            <!-- International Phone Number Format -->
+            <VerticalStackLayout Spacing="8">
+                <Label Text="International Phone Number (Format: +1 (XXX) XXX-XXXX)" 
+                       FontSize="14"
+                       FontAttributes="Bold"/>
+                
+                <editors:SfMaskedEntry x:Name="InternationalPhoneNumberEntry"
+                                       Mask="+1 (###) ###-####"
+                                       Placeholder="+1 (123) 456-7890"
+                                       HeightRequest="50"
+                                       HorizontalTextAlignment="Center"
+                                       FontSize="16"
+                                       PromptChar="_"/>
+                
+                <Label x:Name="InternationalPhoneNumberStatus" 
+                       FontSize="12"
+                       TextColor="#888888"/>
+            </VerticalStackLayout>
+
+            <!-- India Phone Number Format -->
+            <VerticalStackLayout Spacing="8">
+                <Label Text="India Phone Number (Format: +91 XXXXX XXXXX)" 
+                       FontSize="14"
+                       FontAttributes="Bold"/>
+                
+                <editors:SfMaskedEntry x:Name="ExtensionPhoneNumberEntry"
+                                       Mask="+91 ##### #####"
+                                       Placeholder="+91 98765 43210"
+                                       HeightRequest="50"
+                                       HorizontalTextAlignment="Center"
+                                       FontSize="16"
+                                       PromptChar="_"/>
+                
+                <Label x:Name="ExtensionPhoneNumberStatus" 
+                       FontSize="12"
+                       TextColor="#888888"/>
+            </VerticalStackLayout>
+
+            <!-- Submit Button -->
+            <Button x:Name="SubmitButton"
+                    Text="Submit"
+                    FontSize="16"
+                    Padding="20,15"
+                    Margin="0,20,0,0"
+                    Clicked="OnSubmitClicked"/>
+
+            <!-- Result Display -->
+            <Border x:Name="ResultFrame"
+                    Stroke="#E0E0E0"
+                    Padding="15"
+                    Margin="0,20,0,0"
+                    IsVisible="False">
+                
+                <VerticalStackLayout Spacing="10">
+                    <Label Text="Submitted Phone Numbers:" 
+                           FontSize="14"
+                           FontAttributes="Bold"/>
+                    
+                    <Label x:Name="ResultLabel" 
+                           FontSize="13"
+                           LineBreakMode="WordWrap"
+                           TextColor="#333333"/>
+                </VerticalStackLayout>
+            </Border>
+            
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
