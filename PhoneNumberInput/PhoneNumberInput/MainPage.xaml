@@ -32,6 +32,7 @@
                                        Mask="(###) ###-####"
                                        Placeholder="(123) 456-7890"
                                        HeightRequest="50"
+                                       WidthRequest="250"
                                        HorizontalTextAlignment="Center"
                                        FontSize="16"
                                        PromptChar="_"/>
@@ -51,6 +52,7 @@
                                        Mask="+1 (###) ###-####"
                                        Placeholder="+1 (123) 456-7890"
                                        HeightRequest="50"
+                                       WidthRequest="250"
                                        HorizontalTextAlignment="Center"
                                        FontSize="16"
                                        PromptChar="_"/>
@@ -70,6 +72,7 @@
                                        Mask="+91 ##### #####"
                                        Placeholder="+91 98765 43210"
                                        HeightRequest="50"
+                                       WidthRequest="250"
                                        HorizontalTextAlignment="Center"
                                        FontSize="16"
                                        PromptChar="_"/>
@@ -85,6 +88,7 @@
                     FontSize="16"
                     Padding="20,15"
                     Margin="0,20,0,0"
+                    WidthRequest="200"
                     Clicked="OnSubmitClicked"/>
 
             <!-- Result Display -->
